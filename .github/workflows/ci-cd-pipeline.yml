@@ -29,3 +29,15 @@ jobs:
 
       - name: Verificar sintaxe
         run: node --check server.js
+
+  deploy-demo:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Simular deploy
+        run: |
+          echo "Testes aprovados!"
+          echo "Iniciando demonstracao de deploy..."
+          echo "Deploy simulado com sucesso."
+          echo "Nenhum servidor externo foi utilizado."
